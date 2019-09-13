@@ -2,8 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class UserProfile(models.Model):
-    created = models.DateTimeField(auto_now_add=True)
+class RescueMeProfile(models.Model):
+    first_name = models.CharField(_('first name'), max_length=30, blank=True)
+    last_name = models.CharField(_('last name'), max_length=30, blank=True)
+    email = models.EmailField(_('email address'), unique=True)
+    create_date = models.DateTimeField(auto_now_add=True)
+    modified_date = models.DateTimeField(auto_now=True)
+    emergency_contacts = models.TextField()
 
     class Meta:
-        ordering = ['created']
+        ordering = ['create_date']
