@@ -6,8 +6,8 @@ import sys
 from setuptools import setup
 
 
-name = 'rescue_me'
-package = 'rescueme'
+name = 'config'
+package = 'rescue_me'
 description = 'Andela IOT Hackathon, Intelligent Cities, Public Safety '
 url = 'https://github.com/dikudeveloper/rescue_me'
 author = 'Joseph Diku'
