@@ -3,9 +3,9 @@ from django.contrib.auth.models import User
 
 
 class RescueMeProfile(models.Model):
-    first_name = models.CharField(_('first name'), max_length=30, blank=True)
-    last_name = models.CharField(_('last name'), max_length=30, blank=True)
-    email = models.EmailField(_('email address'), unique=True)
+    first_name = models.CharField(max_length=30, blank=True)
+    last_name = models.CharField(max_length=30, blank=True)
+    email = models.EmailField(unique=True)
     create_date = models.DateTimeField(auto_now_add=True)
     modified_date = models.DateTimeField(auto_now=True)
     emergency_contacts = models.TextField()
